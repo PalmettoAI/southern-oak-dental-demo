@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southern Oak Dental — Conway, SC | Family Dentist</title>
+  <meta name="description" content="Southern Oak Dental in Conway, SC — 4.7 stars, 607 reviews. Conway's community choice for family dental care. Call (843) 733-3387." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Southern Oak Dental Conway",
+    "description": "Conway's community choice for family dental care — 4.7 stars, 607 reviews.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Conway",
+      "addressRegion": "SC",
+      "addressCountry": "US"
+    },
+    "telephone": "(843) 733-3387",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "607"
+    },
+    "url": "https://palmettoai.com"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:      #15803D;
+      --green-dark: #166534;
+      --green-light:#DCFCE7;
+      --brown:      #78350F;
+      --brown-light:#FEF3C7;
+      --cream:      #FEFCE8;
+      --warm-white: #FFFBEB;
+      --text:       #1C1917;
+      --text-muted: #57534E;
+      --border:     #E7E5E4;
+      --radius:     12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--warm-white);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── DEMO BANNER ── */
+    .demo-banner {
+      background: var(--brown);
+      color: #FEF3C7;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 0.02em;
+    }
+    .demo-banner a { color: #FDE68A; font-weight: 700; text-decoration: none; }
+    .demo-banner a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      background: #fff;
+      border-bottom: 2px solid var(--green-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(21,128,61,0.08);
+    }
+    .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.2;
+    }
+    .logo-sub {
+      font-size: 0.75rem;
+      color: var(--brown);
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--green); }
+    .phone-link {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .phone-link:hover { color: var(--green-dark); }
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--green-dark);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 16px 24px 20px;
+      gap: 14px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .btn-primary { text-align: center; margin-top: 4px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #FFFBEB 0%, #ECFDF5 60%, #D1FAE5 100%);
+      padding: 80px 24px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '🌳';
+      position: absolute;
+      font-size: 18rem;
+      opacity: 0.04;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border: 1px solid #BBF7D0;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--green-dark);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 36px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--green-dark);
+      border: 2px solid var(--green);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: var(--green-light); }
+
+    /* ── SOCIAL PROOF BAR ── */
+    .proof-bar {
+      background: var(--brown);
+      color: #FEF3C7;
+      padding: 18px 24px;
+    }
+    .proof-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 40px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .proof-item + .proof-item {
+      border-left: 1px solid rgba(254,243,199,0.3);
+    }
+    .proof-number {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #FDE68A;
+      line-height: 1.1;
+    }
+    .proof-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #FEF3C7;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
+    /* ── SECTIONS SHARED ── */
+    section { padding: 72px 24px; }
+    .section-inner { max-width: 1140px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--green-dark);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--cream); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-tree {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9rem;
+      opacity: 0.85;
+      filter: drop-shadow(0 4px 16px rgba(21,128,61,0.15));
+    }
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+    .about-values {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .about-values li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .about-values li::before {
+      content: '🌿';
+      font-size: 1.1rem;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: #fff; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--cream);
+      border: 1px solid #FDE68A;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(120,53,15,0.12); }
+    .service-icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .service-card h3 {
+      font-size: 1.1rem;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── ACCEPTING NEW PATIENTS BANNER ── */
+    .accepting-banner {
+      background: var(--green);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .accepting-banner-inner { max-width: 800px; margin: 0 auto; }
+    .accepting-banner h2 {
+      color: #fff;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      margin-bottom: 12px;
+    }
+    .accepting-banner p {
+      color: #D1FAE5;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+    .accepting-banner .btn-white {
+      background: #fff;
+      color: var(--green-dark);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .accepting-banner .btn-white:hover { background: #ECFDF5; transform: translateY(-1px); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--cream); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      font-size: 4rem;
+      color: var(--green-light);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .stars {
+      color: #D97706;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .testimonial-text {
+      font-size: 0.97rem;
+      color: var(--text);
+      margin-bottom: 18px;
+      margin-top: 8px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .testimonial-author {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+    .testimonial-location {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ── CONTACT ── */
+    .contact { background: #fff; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .contact-info h3 {
+      font-size: 1.3rem;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+    }
+    .contact-info p {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .contact-detail-icon { font-size: 1.3rem; }
+    .contact-detail-text {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .contact-detail-text strong { color: var(--green-dark); display: block; font-size: 1rem; }
+    .hours-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .hours-list li:last-child { border-bottom: none; }
+    form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    label {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.03em;
+    }
+    input, select, textarea {
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.93rem;
+      color: var(--text);
+      background: var(--warm-white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--green); background: #fff; }
+    textarea { resize: vertical; min-height: 90px; }
+    .form-note {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1C1917;
+      color: #D6D3D1;
+      padding: 40px 24px 28px;
+    }
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 1.2rem;
+      color: #FDE68A;
+      font-weight: 700;
+    }
+    .footer-details {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.88rem;
+      color: #A8A29E;
+      line-height: 1.8;
+    }
+    .footer-details a { color: #6EE7B7; text-decoration: none; }
+    .footer-details a:hover { text-decoration: underline; }
+    .footer-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.88rem;
+    }
+    .footer-stars { color: #D97706; letter-spacing: 2px; }
+    .footer-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 8px 0;
+    }
+    .footer-built {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.78rem;
+      color: #78716C;
+    }
+    .footer-built a { color: #6EE7B7; text-decoration: none; }
+    .footer-built a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav, .phone-link { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-tree { font-size: 5rem; order: -1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .proof-item { padding: 8px 20px; }
+      .proof-item + .proof-item { border-left: none; border-top: 1px solid rgba(254,243,199,0.2); }
+      .proof-bar-inner { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 52px 16px; }
+      .hero { padding: 56px 16px 52px; }
+      .header-inner { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    🌳 DEMO SITE — Built by <a href="https://palmettoai.com" target="_blank" rel="noopener">PalmettoAI</a> | palmettoai.com
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">
+          <span class="logo-name">Southern Oak Dental</span>
+          <span class="logo-sub">Conway, South Carolina</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <nav>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="tel:8437333387" class="phone-link">(843) 733-3387</a>
+        <a href="#contact" class="btn-primary">Join Our Practice</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+      <a href="tel:8437333387">(843) 733-3387</a>
+      <a href="#contact" class="btn-primary" onclick="toggleMenu()">Join Our Practice</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">⭐ Conway's Trusted Family Dentist</div>
+      <h1>607 Conway Patients<br>Can't Be Wrong.</h1>
+      <p>4.7 stars, 607 reviews — Southern Oak Dental is Conway's community choice for family dental care. Rooted here. Ready for you.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary" style="font-size:1rem;padding:13px 28px;">Join Our Practice</a>
+        <a href="tel:8437333387" class="btn-secondary" style="font-size:1rem;padding:13px 28px;">Call (843) 733-3387</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="proof-bar">
+    <div class="proof-bar-inner">
+      <div class="proof-item">
+        <span class="proof-number">4.7★</span>
+        <span class="proof-label">Average Rating</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-number">607</span>
+        <span class="proof-label">Verified Reviews</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-number">Conway's</span>
+        <span class="proof-label">Community Dentist</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-tree">🌳</div>
+        <div class="about-content">
+          <p class="section-label">Rooted in Conway</p>
+          <h2>Strong Roots.<br>Lasting Care.</h2>
+          <p>Like the southern live oaks that shade Conway's streets, Southern Oak Dental is built to last. We've grown alongside this community — offering honest, caring dental care to families across Horry County for years.</p>
+          <p>We believe great dental care isn't complicated. Show up, listen carefully, treat people right, and leave every patient smiling a little brighter than when they walked in.</p>
+          <ul class="about-values">
+            <li>Honest treatment recommendations — always</li>
+            <li>Warm, unhurried appointments for every age</li>
+            <li>Deeply committed to the Conway community</li>
+            <li>Transparent pricing, no surprises</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="section-label">What We Offer</p>
+      <h2>Care for the Whole Family</h2>
+      <p class="section-lead">From first teeth to a lifetime of smiles — we offer comprehensive dental services with a warm, southern touch.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🦷</div>
+          <h3>Family &amp; Preventive Care</h3>
+          <p>Cleanings, exams, digital X-rays, fluoride, and sealants for patients of all ages. The foundation of a healthy smile starts here.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Restorative Dentistry</h3>
+          <p>Fillings, crowns, bridges, and tooth-colored restorations that bring function and confidence back to your smile — beautifully.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Cosmetic Dentistry</h3>
+          <p>Professional whitening, veneers, and smile makeovers. Because a confident smile opens doors — and we love helping Conway smile brighter.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Emergency Dental Care</h3>
+          <p>Toothache? Broken tooth? We make room for dental emergencies. Conway patients know they can call us when it matters most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCEPTING NEW PATIENTS BANNER -->
+  <div class="accepting-banner">
+    <div class="accepting-banner-inner">
+      <h2>🌿 Accepting New Patients — All Ages Welcome</h2>
+      <p>We're growing — and we'd love to have your family join ours. Same-week new patient appointments often available.</p>
+      <a href="#contact" class="btn-white">Request an Appointment</a>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-inner">
+      <p class="section-label">What Conway Is Saying</p>
+      <h2>Trusted by Horry County Families</h2>
+      <p class="section-lead">Don't take our word for it — here's what your neighbors in Conway and Horry County have to say.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">I've been going to Southern Oak Dental for two years now and I wouldn't go anywhere else. The whole team makes you feel like family. Dr. took the time to explain everything — no rushing, no surprises. This is how dentistry should be.</p>
+          <div class="testimonial-author">Margaret T.</div>
+          <div class="testimonial-location">Conway, SC</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">Brought my three kids here for the first time last month. All three actually want to come back — that says everything. The staff is incredibly patient and kind. Finding Southern Oak Dental was the best decision we made for our family's dental care.</p>
+          <div class="testimonial-author">Jason &amp; Kim R.</div>
+          <div class="testimonial-location">Myrtle Beach / Horry County, SC</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">I had a dental emergency on a Tuesday morning and they got me in within a couple hours. The pain was gone by that afternoon. I am so grateful for this practice. Southern Oak is truly a gem in Conway. Highly recommend to everyone I know.</p>
+          <div class="testimonial-author">Robert A.</div>
+          <div class="testimonial-location">Conway, SC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label">Get In Touch</p>
+          <h2>We'd Love to<br>Meet You.</h2>
+          <p>Ready to become part of the Southern Oak family? Give us a call or fill out the form — we'll be in touch shortly to schedule your visit.</p>
+
+          <div class="contact-detail" style="margin-top:28px;">
+            <span class="contact-detail-icon">📞</span>
+            <div class="contact-detail-text">
+              <strong><a href="tel:8437333387" style="color:var(--green-dark);text-decoration:none;">(843) 733-3387</a></strong>
+              Call or text us anytime
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-icon">📍</span>
+            <div class="contact-detail-text">
+              <strong>Conway, South Carolina</strong>
+              Serving Conway &amp; all of Horry County
+            </div>
+          </div>
+
+          <ul class="hours-list" style="margin-top:28px;">
+            <li><span>Monday – Thursday</span><span>8:00 AM – 5:00 PM</span></li>
+            <li><span>Friday</span><span>8:00 AM – 2:00 PM</span></li>
+            <li><span>Saturday</span><span>By Appointment</span></li>
+            <li><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="section-label">New Patient Form</p>
+          <h2 style="margin-bottom:28px;">Request an Appointment</h2>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="Sarah" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="lname" placeholder="Johnson" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="(843) 555-0100" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="sarah@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Type of Visit</label>
+              <select id="service" name="service">
+                <option value="">Select a service…</option>
+                <option>New Patient Exam &amp; Cleaning</option>
+                <option>Family / Preventive Care</option>
+                <option>Restorative (Fillings, Crowns)</option>
+                <option>Cosmetic Consultation</option>
+                <option>Dental Emergency</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" placeholder="New patient, insurance info, concerns…"></textarea>
+            </div>
+            <p class="form-note">* Required fields. We'll reach out within one business day to confirm your appointment.</p>
+            <button type="submit" class="btn-primary" style="font-size:1rem;padding:13px 28px;width:100%;margin-top:4px;">
+              Request My Appointment →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">🌿 Southern Oak Dental</div>
+      <div class="footer-rating">
+        <span class="footer-stars">★★★★★</span>
+        <span style="font-family:'Segoe UI',sans-serif;font-size:0.88rem;color:#A8A29E;">4.7 Stars · 607 Reviews</span>
+      </div>
+      <div class="footer-details">
+        Conway, South Carolina &nbsp;·&nbsp;
+        <a href="tel:8437333387">(843) 733-3387</a>
+        <br>
+        Conway's Community Dentist — Serving Horry County Families
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-built">
+        Demo site built by <a href="https://palmettoai.com" target="_blank" rel="noopener">PalmettoAI</a> — Myrtle Beach's dental marketing agency.
+        &nbsp;·&nbsp; © 2025 Southern Oak Dental Conway
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+    }
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.querySelector('.hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+
+    // Smooth scroll offset for sticky header
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Form submission (demo)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = '✓ Request Received — We\'ll Be In Touch!';
+      btn.style.background = '#166534';
+      btn.disabled = true;
+    }
+  </script>
+
+</body>
+</html>
